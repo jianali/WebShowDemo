@@ -36,3 +36,8 @@
     transform: rotate(360deg);
   }
 }
+
+.col_style{
+  padding: 8px 0;
+  background: #61da61;
+}
