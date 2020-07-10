@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 //加入antd样式及控件
-import { Button, DatePicker, version, Divider } from 'antd'
+import { Button, DatePicker, version, Divider, Slider } from 'antd'
 import 'antd/dist/antd.css'
 import { Card } from 'antd'
 
@@ -13,6 +13,7 @@ import { Row, Col } from 'antd'
 import { Layout } from 'antd'
 //引入子组件
 import ChildComponent from './ChildComponent.jsx'
+import BasicLayout from './BasicLayout.jsx'
 
 
 
@@ -77,10 +78,13 @@ function App() {
       </ChildComponent>
 
       {/* 修改受控组件中的value值 */}
-      
+
 
       {/* // 使用路由实现单页面应用 */}
       <Card style={style1} className='card' actions={[<a>操作1</a>,<a>操作2</a>]}></Card>
+
+      <br></br>
+      <BasicLayout></BasicLayout>
 
       </div>
     </div>
