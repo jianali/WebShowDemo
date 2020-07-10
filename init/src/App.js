@@ -5,18 +5,29 @@ import './App.css';
 //加入antd样式及控件
 import { Button, DatePicker, version, Divider } from 'antd'
 import 'antd/dist/antd.css'
+import { Card } from 'antd'
 
 //使用栅格系统布局
 import { Row, Col } from 'antd'
 //页面布局
 import { Layout } from 'antd'
+//引入子组件
+import ChildComponent from './ChildComponent.jsx'
 
 
 
 function App() {
 
   const style = {background: '#0092ff', padding:'8px 0'};
+  const style1 =  {
+    width: '400px',
+    margin: '30px',
+    boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2)',
+    border: '1px solid #e8e8e8',
+  };
+
   const { Header ,Footer,Sider,Content} = Layout;
+
   return (
     <div className="App">
       <div className="space-align-container">
@@ -59,8 +70,23 @@ function App() {
             </Content>
           </Layout>
       </Layout>
+
+      {/* //测试子组件、自定义组件，并且测试传参等功能 ,组件内部的状态记录在props上，组件的外部状态记录在this.state上*/}
+      <ChildComponent name="lijian" onClick={(e)=>{alert("这是一个受控组件From parent component")}}>
+        <div>111222333</div>
+      </ChildComponent>
+
+      {/* 修改受控组件中的value值 */}
+      
+
+      {/* // 使用路由实现单页面应用 */}
+      <Card style={style1} className='card' actions={[<a>操作1</a>,<a>操作2</a>]}></Card>
+
       </div>
     </div>
+
+    
+
   );
 }
 
