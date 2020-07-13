@@ -14,6 +14,7 @@ import { Layout } from 'antd'
 //引入子组件
 import ChildComponent from './ChildComponent.jsx'
 import BasicLayout from './BasicLayout.jsx'
+import ReactDemo from './ReactDemo';
 
 
 
@@ -84,7 +85,13 @@ function App() {
       <Card style={style1} className='card' actions={[<a>操作1</a>,<a>操作2</a>]}></Card>
 
       <br></br>
-      <BasicLayout></BasicLayout>
+      <BasicLayout>
+        <div>test</div>
+
+        {/* 测试路由 */}
+        <ReactDemo></ReactDemo>
+
+      </BasicLayout>
 
       </div>
     </div>
